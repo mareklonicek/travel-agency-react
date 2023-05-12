@@ -3,6 +3,7 @@ import { faker } from '@faker-js/faker';
 import ImageCollage from '../components/ImageCollage';
 import Accordion from '../components/Accordion';
 import Modal from '../components/Modal';
+import faker from 'faker';
 
 const Tour=()=>{
     const randomNum = Math.floor(Math.random() * 1000); 
