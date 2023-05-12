@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import faker from 'faker';
 import { faker } from '@faker-js/faker';
 
 function srcset(image, size, rows = 1, cols = 1) {

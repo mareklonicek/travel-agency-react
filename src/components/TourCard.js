@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import { AccessTime } from "@mui/icons-material";
 import Rating from '@mui/material/Rating';
 import { createTheme,ThemeProvider } from "@mui/material";
-import faker from 'faker';
+
 
 
 const TourCard=({value})=>{
