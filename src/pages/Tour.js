@@ -11,7 +11,7 @@ const Tour=()=>{
     return(
    <Container sx={{width:900,marginBottom:15}} >
     <Typography variant="h3" component="h1" marginTop={12}>
-        Welcome to Las Vegas
+        Welcome to Prague, the capital of the Czech Republic
         </Typography>
             <Box marginTop={3} sx={{display:"flex"}}>
                 <img src={imageUrl} alt="image" heigth={350} width={600}/>
