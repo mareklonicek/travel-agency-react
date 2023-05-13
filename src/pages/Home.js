@@ -16,7 +16,7 @@ const Home = () => {
         <Typography variant="h3" component="h1" align="center" marginBottom={5}>
           Our Travel Agency's <strong>BlueTravel</strong> offer
         </Typography>   
-        <Typography className="destination" sx={{color:"#6600cc"}}variant="h4" component="h5" align="left" marginBottom={2}>
+        <Typography className="destination" sx={{color:"#6600cc"}}variant="h3" component="h5" align="left" marginBottom={2}>
           <i>...Select your dream destination:</i>
         </Typography>  
           <FormControl sx={{ m: 1, minWidth: 140 }} size="small">
