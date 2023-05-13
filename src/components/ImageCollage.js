@@ -15,8 +15,8 @@ function srcset(image, size, rows = 1, cols = 1) {
 const QuiltedImageList=() =>{
 
   return (
-    <ImageList
-      sx={{ width: 300, height: 350 }}
+    <ImageList className="image-list"
+      sx={{ width: 300, height: 350,borderLeft:"3px solid white" }}
       variant="quilted"
       cols={4}
       rowHeight={121}

@@ -1,12 +1,14 @@
-
+import { FaJetFighter } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
 
 const Welcome=()=>{
 
     return(
-    <div> 
-                    <br></br><br></br><br></br><br></br>
-                <h1>Welcome!</h1>
-    </div>
+        <div className="icon-container">
+        <IconContext.Provider value={{ color: 'white', size: '4rem' }}>
+          <FaJetFighter />
+        </IconContext.Provider>
+      </div>
     )
 }
 

@@ -7,12 +7,15 @@ import { AccessTime } from "@mui/icons-material";
 import Rating from '@mui/material/Rating';
 import { createTheme,ThemeProvider } from "@mui/material";
 import { Link } from "react-router-dom";
+import * as React from 'react';
+import Button from '@mui/material/Button';
 
 
 
-const TourCard=({value})=>{
+const TourCard=({value, selectedDestination})=>{
+   // const {selectedDestination, setSelectedDestination} = React.useContext(DestinationContext);
     const randomNum = Math.floor(Math.random() * 1000); // Generate a random number between 0 and 999
-   const imageUrl = `https://loremflickr.com/800/400/praque?random=${randomNum}`; // Append the random number to the URL of the image
+   const imageUrl = `https://loremflickr.com/800/400/${selectedDestination}?random=${randomNum}`; // Append the random number to the URL of the image
   const rating=faker.random.numeric(1)/2
   const theme=createTheme({
     components:{
@@ -34,13 +37,21 @@ const TourCard=({value})=>{
     return(
         <Grid item xs={3}>
             <ThemeProvider theme={theme}>
-            <Link to={`/tour/`} style={{ textDecoration: 'none' }}>
+            <Link to={`/tour/${value}`} style={{ textDecoration: 'none' }}>
         <Paper elevation={3} sx={{backgroundColor:"#fff"}}>
             <img src={imageUrl} width={300} height={50} alt=""
              className="img"/>
-            <Box paddingX={1}>
-                    <Typography variant="subtitle1" component="h2">
-                    Tour {value+1} {faker.lorem.sentence(5)}
+            <Box paddingX={1} marginBottom={5.5}>
+                    <Typography variant="subtitle1" component="h2"
+                    sx={{
+                        display: "-webkit-box",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        "-webkit-line-clamp": 2, // Set the number of lines to display
+                        "-webkit-box-orient": "vertical",
+                        maxHeight: "3.2rem", // Set the maximum height of the text container
+                      }}>
+                    Tour {value} {faker.lorem.sentence(9)}
                     </Typography>
                     <Box sx={{display:"flex",alignItems:"center"}}  marginTop={1}>
                         <AccessTime sx={{width:12.5}}/>
@@ -58,11 +69,16 @@ const TourCard=({value})=>{
                         <small>({faker.random.numeric(3)}  reviews)</small>
                         </Typography>
                     </Box>
-                    <Box sx={{display:"flex",alignItems:"center"}} marginTop={1.5}
+                    <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-around"}}
+                     marginTop={1.5} marginBottom={3}
+                    
                      >
-                        <Typography variant="h6" component="h3" marginBottom={1.5}>
+                        <Typography variant="h6" component="h3" >
                         From {faker.random.numeric(3)} &euro;
                         </Typography>
+                      
+                            <Button color="primary" >Details</Button>
+                       
                     </Box>
             </Box>
             
