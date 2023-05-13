@@ -14,7 +14,6 @@ function srcset(image, size, rows = 1, cols = 1) {
 
 const QuiltedImageList=() =>{
   const randomNum = Math.floor(Math.random() * 1000); // Generate a random number between 0 and 999
-  const imageUrl = `https://loremflickr.com/800/400/praque?random=${randomNum}`; 
   return (
     <ImageList
       sx={{ width: 300, height: 350 }}

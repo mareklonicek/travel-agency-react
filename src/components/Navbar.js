@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { NavLink } from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -17,7 +18,7 @@ const Search = styled('div')(({ theme }) => ({
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginLeft: 0,
+  marginRight: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(1),
@@ -66,7 +67,7 @@ const SearchAppBar=() =>{
           >
             <MenuIcon />
           </IconButton>
-         
+         <NavLink to="/">
           <Typography
             variant="h6"
             noWrap
@@ -75,6 +76,7 @@ const SearchAppBar=() =>{
           >
             BLUE TRAVEL
           </Typography>
+          </NavLink>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

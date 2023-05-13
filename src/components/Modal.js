@@ -1,4 +1,4 @@
-import { useState } from 'react';import * as React from 'react';
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -16,15 +16,11 @@ const style = {
   p: 4,
 };
 
-const BasicModal=()=> {
+export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [date, setDate] = useState('');
 
-  const handleDateChange = (event) => {
-    setDate(event.target.value);
-  };
   return (
     <div>
       <Button onClick={handleOpen}>BOOK NOW</Button>
@@ -34,23 +30,14 @@ const BasicModal=()=> {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Choose a date of this tour
+        <Box sx={style} align="center">
+          <Typography id="modal-modal-title" variant="h6" component="h2" marginBottom={5}
+          >
+            Select date of your tour
           </Typography>
-          <div>
-     
-      <input
-        type="date"
-        id="date-input"
-        value={date}
-        onChange={handleDateChange}
-      />
-    </div>
+          <input type="date" />
         </Box>
       </Modal>
     </div>
   );
 }
-
-export default BasicModal

@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Typography } from "@mui/material";
 import TourCard from '../components/TourCard';
-import { NavLink } from 'react-router-dom';
+
 
 const Home=()=>{
 
@@ -14,12 +14,12 @@ const Home=()=>{
             Our Travel Agency's <strong>BlueTravel</strong> offer
           </Typography>
           </Container>   
-        <Grid container spacing={5}>
+        <Grid container spacing={2}>
           
             {[...Array(10)].map((x, i) =>
-            <NavLink to="/tour">
-                <TourCard key={i} value={i}/> 
-            </NavLink>
+         
+                <TourCard value={i} key={i}/> 
+        
            
         )}
             
