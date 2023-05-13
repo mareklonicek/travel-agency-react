@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
   font-family: Roboto;
 }
+.destination{font-family:Kaushan Script;}
 :root {
   --blue: #1976d2;
 }

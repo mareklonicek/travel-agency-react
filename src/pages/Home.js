@@ -7,7 +7,7 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 
 const Home = () => {
-  const [selectedDestination, setSelectedDestination] = useState("");
+  const [selectedDestination, setSelectedDestination] = useState("Prague");
 
 
   return (
@@ -16,8 +16,8 @@ const Home = () => {
         <Typography variant="h3" component="h1" align="center" marginBottom={5}>
           Our Travel Agency's <strong>BlueTravel</strong> offer
         </Typography>   
-        <Typography variant="h5" component="h5" align="left" marginBottom={2}>
-          Select your dream destination
+        <Typography className="destination" sx={{color:"#6600cc"}}variant="h4" component="h5" align="left" marginBottom={2}>
+          ...Select your dream destination:
         </Typography>  
           <FormControl sx={{ m: 1, minWidth: 140 }} size="small">
       <InputLabel id="demo-select-small-label">Destination</InputLabel>
@@ -37,8 +37,6 @@ const Home = () => {
           <MenuItem value="Barcelona">Barcelona</MenuItem>
           <MenuItem value="Rome">Rome</MenuItem>
           <MenuItem value="Sydney">Sydney</MenuItem>
-          <MenuItem value="Rio de Janeiro">Rio de Janeiro</MenuItem>
-          <MenuItem value="Cape Town">Cape Town</MenuItem>
           <MenuItem value="Dubai">Dubai</MenuItem>
           <MenuItem value="Bangkok">Bangkok</MenuItem>
           <MenuItem value="Amsterdam">Amsterdam</MenuItem>
@@ -50,7 +48,7 @@ const Home = () => {
     </FormControl>
       </Container >   
       <Grid container spacing={2} marginTop={5}>
-        {[...Array(10)].map((x, i) => (
+        {[...Array(22)].map((x, i) => (
           <TourCard value={i+1} key={i} selectedDestination={selectedDestination}/> 
         ))}
       </Grid>

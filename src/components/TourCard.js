@@ -38,7 +38,7 @@ const TourCard=({value, selectedDestination})=>{
         <Grid item xs={3}>
             <ThemeProvider theme={theme}>
             <Link to={`/tour/${value}`} style={{ textDecoration: 'none' }}>
-        <Paper elevation={3} sx={{backgroundColor:"#fff"}}>
+        <Paper elevation={3} sx={{backgroundColor:"#fff"}} marginY={3}>
             <img src={imageUrl} width={300} height={50} alt=""
              className="img"/>
             <Box paddingX={1} marginBottom={5.5}>
@@ -55,7 +55,7 @@ const TourCard=({value, selectedDestination})=>{
                     </Typography>
                     <Box sx={{display:"flex",alignItems:"center"}}  marginTop={1}>
                         <AccessTime sx={{width:12.5}}/>
-                        <Typography variant="body2" component="p" marginLeft={0.5}>     
+                        <Typography variant="body3" component="p" marginLeft={0.5}>     
                         {Math.floor(Math.random()*9)+1} hours
                         </Typography>
                     </Box>
@@ -65,7 +65,7 @@ const TourCard=({value, selectedDestination})=>{
                      <Typography variant="body2" component="p" marginLeft={0.5}>
                         {rating} 
                         </Typography>
-                        <Typography variant="body3" component="p" marginLeft={1.5}>
+                        <Typography variant="body2" component="p" marginLeft={1.5}>
                         <small>({faker.random.numeric(3)}  reviews)</small>
                         </Typography>
                     </Box>
@@ -74,7 +74,7 @@ const TourCard=({value, selectedDestination})=>{
                     
                      >
                         <Typography variant="h6" component="h3" >
-                        From {faker.random.numeric(3)} &euro;
+                        From {Math.floor(Math.random()*799)+199} &euro;
                         </Typography>
                       
                             <Button color="primary" >Details</Button>
