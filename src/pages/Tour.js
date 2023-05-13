@@ -15,7 +15,7 @@ const Tour=()=>{
         Welcome to Prague, the capital of the Czech Republic
         </Typography>
             <Box marginTop={3} sx={{display:"flex"}}>
-                <img src={imageUrl} alt="image" heigth={350} width={600}/>
+                <img src={imageUrl} alt="" heigth={350} width={600}/>
                 <ImageCollage />
                 </Box>
                 <Box>

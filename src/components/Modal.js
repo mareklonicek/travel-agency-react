@@ -34,8 +34,8 @@ const BasicModal=()=> {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={{backgroundColor:"#ddd"}}>
-          <Typography id="modal-modal-title" variant="h6" component="h2" marginBottom={3}>
+        <Box>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
             Choose a date of this tour
           </Typography>
           <div>

@@ -17,7 +17,7 @@ const Home=()=>{
         <Grid container spacing={5}>
           
             {[...Array(10)].map((x, i) =>
-            <NavLink to="/tour" key={i}>
+            <NavLink to="/tour">
                 <TourCard key={i} value={i}/> 
             </NavLink>
            
