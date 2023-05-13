@@ -5,13 +5,17 @@ import Accordion from '../components/Accordion';
 import Modal from '../components/Modal';
 import { useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
-import { NavLink } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 
 
 const Tour=()=>{
     const randomNum = Math.floor(Math.random() * 1000); 
     const imageUrl = `https://loremflickr.com/800/400/praque?random=${randomNum}`
     const{id}=useParams()
+    const navigate = useNavigate();
+
+   
+  
     return(
    <Container sx={{width:900,marginBottom:15}} >
     <Typography variant="h3" component="h1" marginTop={12}>
@@ -35,9 +39,9 @@ const Tour=()=>{
                         </Typography>
                        <Accordion />
                 </Box>
-                <NavLink to="/">
-                <Button variant="contained" marginBottom={10}>Back</Button>
-                </NavLink>
+             
+                <Button onClick={() => navigate(-1)} variant="contained" marginBottom={10}>Back</Button>
+               
                 <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
                     <BottomNavigation>
                         <Modal/>
