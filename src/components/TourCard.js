@@ -36,7 +36,7 @@ const TourCard=({value})=>{
             <ThemeProvider theme={theme}>
             <Link to={`/tour/`} style={{ textDecoration: 'none' }}>
         <Paper elevation={3} sx={{backgroundColor:"#fff"}}>
-            <img src={imageUrl} width={300} height={50} alt="picture"
+            <img src={imageUrl} width={300} height={50} alt=""
              className="img"/>
             <Box paddingX={1}>
                     <Typography variant="subtitle1" component="h2">
