@@ -28,24 +28,24 @@ const Home = () => {
         label="Choose your dream destination"
         onChange={(e)=>{setSelectedDestination(e.target.value);}}
       >
-        <MenuItem value="">
-          <em>Prague</em>
+        <MenuItem value="Prague">
+          <em>None</em>
         </MenuItem>
         <MenuItem value="Prague">Prague</MenuItem>
           <MenuItem value="Paris">Paris</MenuItem>
           <MenuItem value="London">London</MenuItem>
           <MenuItem value="Barcelona">Barcelona</MenuItem>
-          <MenuItem value="Rome">Prague</MenuItem>
-          <MenuItem value="Sydney">Paris</MenuItem>
-          <MenuItem value="Rio de Janeiro">London</MenuItem>
-          <MenuItem value="Cape Town">Barcelona</MenuItem>
-          <MenuItem value="Dubai">Prague</MenuItem>
-          <MenuItem value="Bangkok">Paris</MenuItem>
-          <MenuItem value="Amsterdam">London</MenuItem>
-          <MenuItem value="Berlin">Barcelona</MenuItem>
-          <MenuItem value="Zurich">Prague</MenuItem>
-          <MenuItem value="Dubrovnik">Paris</MenuItem>
-          <MenuItem value="Athens">London</MenuItem> 
+          <MenuItem value="Rome">Rome</MenuItem>
+          <MenuItem value="Sydney">Sydney</MenuItem>
+          <MenuItem value="Rio de Janeiro">Rio de Janeiro</MenuItem>
+          <MenuItem value="Cape Town">Cape Town</MenuItem>
+          <MenuItem value="Dubai">Dubai</MenuItem>
+          <MenuItem value="Bangkok">Bangkok</MenuItem>
+          <MenuItem value="Amsterdam">Amsterdam</MenuItem>
+          <MenuItem value="Berlin">Berlin</MenuItem>
+          <MenuItem value="Zurich">Zurich</MenuItem>
+          <MenuItem value="Dubrovnik">Dubrovnik</MenuItem>
+          <MenuItem value="Athens">Athens</MenuItem> 
       </Select>
     </FormControl>
       </Container >   
