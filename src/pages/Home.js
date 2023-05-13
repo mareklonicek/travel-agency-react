@@ -17,7 +17,7 @@ const Home = () => {
           Our Travel Agency's <strong>BlueTravel</strong> offer
         </Typography>   
         <Typography className="destination" sx={{color:"#6600cc"}}variant="h4" component="h5" align="left" marginBottom={2}>
-          ...Select your dream destination:
+          <i>...Select your dream destination:</i>
         </Typography>  
           <FormControl sx={{ m: 1, minWidth: 140 }} size="small">
       <InputLabel id="demo-select-small-label">Destination</InputLabel>
